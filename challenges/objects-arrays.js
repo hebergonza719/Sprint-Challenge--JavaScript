@@ -35,6 +35,8 @@ const velociraptor = {
 
 // Using your dinosaur objects, log answers to these questions:
 
+console.log("===Objects===", "\n");
+
 // How much did tyrannosaurus weigh?
 console.log(tyrannosaurus.weight);
 
@@ -70,6 +72,9 @@ const graduates = [
   { id: 10, first_name: "Hube", university: "Universitat Rovira I Virgili Tarragona", email: "hlethbrig9@foxnews.com" },
 ];
 
+console.log("");
+console.log("===Arrays===");
+
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
@@ -79,6 +84,7 @@ universities = graduates.map((item) => {
 });
 universities = universities.sort();
 console.log(`\n`);
+console.log("Request 1", "\n");
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -92,6 +98,7 @@ contactInfo = graduates.map((item) => {
   return `${item.first_name} ${item.email}`;
 });
 console.log(`\n`);
+console.log("Request 2", "\n");
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
@@ -100,10 +107,13 @@ unisWithUni = graduates.filter((item) => {
   return item.university.includes("Uni") == true;
 });
 console.log(`\n`);
+console.log("Request 3", "\n");
 console.log(unisWithUni);
 
 
 // ==== ADVANCED Array Methods ====
+console.log("");
+console.log("===ADVANCED Array Methods===");
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
@@ -130,6 +140,7 @@ zooAnimals.forEach((item) => {
   displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`);
 });
 console.log(`\n`);
+console.log("Request 1", "\n");
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -145,6 +156,7 @@ lowCaseAnimalNames = zooAnimals.map((item) => {
   return item.animal_name.toLowerCase();
 });
 console.log(`\n`);
+console.log("Request 2", "\n");
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -157,6 +169,7 @@ lowPopulationAnimals = zooAnimals.filter((item) => {
   return item.population < 5;
 });
 console.log(`\n`);
+console.log("Request 3", "\n");
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -169,6 +182,7 @@ populationTotal = zooAnimals.reduce((total, item) => {
   return total = total + item.population;
 }, 0)
 console.log(`\n`);
+console.log("Request 4", "\n");
 console.log(populationTotal);
 
 
